@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <nav>
+      <h1>Student Study Planner</h1>
+    </nav>
+    <main>
+      <section id="dashboard">
+        <section class="card overview">
+          <h2>Overview</h2>
+          <div class="overview-grid">
+            <div class="stat">
+              <span id="total-subjects">0</span>
+              <p>Subjects</p>
+            </div>
+            <div class="stat">
+              <span id="pending-tasks">0</span>
+              <p>Pending Tasks</p>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="card subjects">
+          <h2>Subjects</h2>
+          <ul id="subject-list"></ul>
+        </section>
+
+        <section class="card schedule">
+          <h2>Today’s Schedule</h2>
+          <div id="schedule-list"></div>
+        </section>
+
+        <section class="card tasks">
+          <h2>Tasks & Deadlines</h2>
+          <ul id="task-list-recent"></ul>
+        </section>
+
+
+      </section>
+      <section id="subjects">
+
+        <section class="card">
+          <h2>Subjects</h2>
+          <form id="subject-form">
+            <input type="text" id="subject-name" placeholder="Subject name" required />
+            <select id="subject-priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+            <button type="submit">Add Subject</button>
+          </form>
+        </section>
+        <section class="card">
+          <ul id="subject-list-sub"></ul>
+        </section>
+      </section>
+
+
+
+      <section id="schedule">
+       
+        <section class="card">
+           <h2>Schedule Planner</h2>
+        <form id="schedule-form">
+          <select id="schedule-day" required>
+            <option value="">Day</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+          </select>
+
+          <input type="time" id="start-time" required />
+          <input type="time" id="end-time" required />
+
+          <select id="schedule-type" required>
+            <option value="">Type</option>
+            <option value="subject">Subject</option>
+            <option value="activity">Activity</option>
+          </select>
+
+          <select id="schedule-subject" hidden>
+            <option value="">Select Subject</option>
+          </select>
+
+          <input type="text" id="schedule-activity" placeholder="Activity name" hidden />
+
+          <button type="submit">Save</button>
+        </form>
+        </section>
+
+        <section class="card schedule-stats">
+          <h3>This Week</h3>
+          <p>
+            <span id="week-schedule-count">0</span> scheduled items
+          </p>
+        </section>
+
+
+ <section class="card">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+              <th>Sun</th>
+            </tr>
+          </thead>
+          <tbody id="schedule-table-body"></tbody>
+        </table>
+        </section>
+      </section>
+
+
+
+      <section id="tasks">
+       
+         <section class="card">
+           <h2>Task Manager</h2>
+        <form id="task-form">
+          <input type="text" id="task-title" placeholder="Task title" required />
+
+          <select id="task-type" required>
+            <option value="">Type</option>
+            <option value="assignment">Assignment</option>
+            <option value="exam">Exam</option>
+            <option value="deadline">Deadline</option>
+            <option value="misc">Misc</option>
+          </select>
+<input type="date" id="task-deadline" required />
+
+          <button type="submit">Add Task</button>
+          
+        </form>
+         
+          <div class="task-filters">
+          <button data-filter="all">All</button>
+          <button data-filter="assignment">Assignments</button>
+          <button data-filter="exam">Exams</button>
+          <button data-filter="deadline">Deadlines</button>
+          <button data-filter="misc">Misc</button>
+        </div>
+</section>
+       
+ <section class="card">
+        <ul id="task-list"></ul>
+        </section>
+      </section>
+      <section class="card analytics">
+        <h2>Progress Analytics</h2>
+
+        <div class="analytics-grid">
+
+          <div class="chart-card">
+            <h3>Subject Priority</h3>
+            <div class="bar-group" id="subject-priority-bars"></div>
+          </div>
+
+          <div class="chart-card">
+            <h3>Task Completion</h3>
+            <div class="bar-group" id="task-completion-bars"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="card settings">
+        <h2>Settings</h2>
+
+        <div class="setting-group">
+          <label>Theme</label>
+          <select id="theme-select">
+            <option value="light">Light+</option>
+            <option value="dark">Dark+</option>
+            <option value="one-dark">One Dark Pro</option>
+            <option value="dracula">Dracula</option>
+            <option value="github-dark">GitHub Dark</option>
+  
+          </select>
+
+        </div>
+
+        <div class="setting-group">
+          <label>Local Storage Usage</label>
+          <div class="storage-bar">
+            <div id="storage-fill"></div>
+          </div>
+          <small id="storage-text"></small>
+        </div>
+
+        <div class="setting-actions">
+          <button id="export-btn">Export Data (JSON)</button>
+          <button id="reset-btn" class="danger">Reset All Data</button>
+        </div>
+      </section>
+
+
+
+    </main>
+  </div>
+
+
+
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>
