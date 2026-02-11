@@ -20,6 +20,7 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--space-6);
+  width: 100%;
 }
 
 #dashboard .overview {
@@ -37,6 +38,7 @@ main {
   #dashboard .schedule,
   #dashboard .tasks {
     grid-column: span 6;
+  
   }
 }
 
@@ -60,16 +62,20 @@ main {
 }
 
 #subjects #subject-list-sub {
-  grid-column: span 8;
+  grid-column: span 4;
 }
 
 @media (max-width: 1024px) {
-  #subjects #subject-form,
-  #subjects #subject-list-sub {
-    grid-column: span 12;
+  #subjects .card {
+    grid-column: span 6;
   }
 }
 
+@media (max-width: 640px) {
+  #subjects .card {
+    grid-column: span 12;
+  }
+}
 #schedule {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -113,12 +119,13 @@ main {
   grid-column: span 4;
 }
 
-
+#tasks #task-list,
+ #tasks .task-filters {
+  grid-column: span 8;
+}
 
 @media (max-width: 1024px) {
-  #tasks #task-form,
-  #tasks .task-filters,
-  #tasks #task-list {
+  #tasks .card {
     grid-column: span 12;
   }
 }

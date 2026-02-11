@@ -248,9 +248,9 @@ button.danger {
 /* tasks */
 
 .task-filters {
-  display: flex;
-  gap: var(--space-2);
-  margin-bottom: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
 }
 
 .task-filters button {
@@ -305,7 +305,7 @@ button.danger {
 #tasks .card {
   display: flex;
   flex-direction: column;
-  max-height: 420px;
+  max-height: 520px;
 }
 
 #dashboard .card {
