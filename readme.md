@@ -5,6 +5,12 @@ It helps students manage subjects, schedules, tasks, and track progress using br
 
 ---
 
+
+<img alt="Awesome GitHub Profile Readme" src="./assets/images/SmartStudyPlanner.gif"> </img>
+
+
+---
+
 ## Table of Contents
 
 - [Features](#features)
@@ -14,7 +20,6 @@ It helps students manage subjects, schedules, tasks, and track progress using br
   - [Task Manager](#task-manager)
   - [Progress Analytics](#progress-analytics)
   - [Settings](#settings)
-- [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Data Persistence](#data-persistence)
 - [Getting Started](#getting-started)
@@ -87,6 +92,12 @@ It helps students manage subjects, schedules, tasks, and track progress using br
 - Live localStorage usage indicator
 - Export all data as JSON
 - Reset all stored data
+
+---
+
+## Project Structure
+
+<img alt="Awesome GitHub Profile Readme" src="./assets/images/smartstudyplanner.png"> </img>
 
 ---
 
