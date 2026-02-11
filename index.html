@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/layout.css">
   <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="manifest" href="./manifest.json">
+
 
   <title>Document</title>
 </head>
@@ -14,8 +16,22 @@
 <body>
   <div>
     <nav>
-      <h1>Student Study Planner</h1>
-    </nav>
+  <h1>Student Study Planner</h1>
+
+  <button class="nav-toggle" aria-label="Toggle menu">
+    ☰
+  </button>
+
+  <div class="nav-links">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#tasks">Tasks</a>
+    <a href="#analytics">Analytics</a>
+    <a href="#settings">Settings</a>
+  </div>
+</nav>
+
     <main>
       <section id="dashboard">
         <section class="card overview">
@@ -176,7 +192,7 @@
 
 
 
-      <section class="card analytics">
+      <section id= "analytics" class="card analytics">
         <h2>Progress Analytics</h2>
 
         <div class="analytics-grid">
@@ -194,7 +210,7 @@
         </div>
       </section>
 
-      <section class="card settings">
+      <section id="settings" class="card settings">
         <h2>Settings</h2>
 
         <div class="setting-group">
@@ -232,6 +248,7 @@
 
 
   <script type="module" src="./assets/js/main.js"></script>
+  
 </body>
 
 </html>
