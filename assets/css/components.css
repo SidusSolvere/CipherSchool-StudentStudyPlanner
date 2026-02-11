@@ -240,12 +240,6 @@ button {
   color: var(--color-text);
 }
 
-button {
-  background: var(--color-primary);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
 
 button:hover {
   opacity: 0.9;
