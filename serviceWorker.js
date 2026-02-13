@@ -1,4 +1,4 @@
-const subjectTracker = "studentStudy1";
+const subjectTracker = "studentStudy2";
 const assets = [
   "/",
   "/index.html",
@@ -13,7 +13,8 @@ const assets = [
    "/js/section/schedule.js",
    "/js/section/settings.js",
    "/js/section/subject.js",
-   "/js/section/todo.js"
+   "/js/section/todo.js",
+   "/manifest.json"
 ];
 
 self.addEventListener("install", installEvent => {
@@ -31,3 +32,4 @@ self.addEventListener("fetch", fetchEvent => {
     })
   );
 });
+
