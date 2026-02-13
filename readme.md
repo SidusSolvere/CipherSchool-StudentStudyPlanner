@@ -1,4 +1,4 @@
-# Student Study Planner
+# <img src="./assets/icons/icon-512x512.png" width="30px"> Student Study Planner
 
 A frontend-only student productivity web application built using HTML, CSS, and vanilla JavaScript.
 The app helps students organize subjects, schedules, tasks, and track academic progress, with all data securely stored in the browser using localStorage—no backend required.
