@@ -1,7 +1,11 @@
 # Student Study Planner
 
-A frontend-only student productivity web app built using HTML, CSS, and vanilla JavaScript.  
-It helps students manage subjects, schedules, tasks, and track progress using browser localStorage.
+A frontend-only student productivity web application built using HTML, CSS, and vanilla JavaScript.
+The app helps students organize subjects, schedules, tasks, and track academic progress, with all data securely stored in the browser using localStorage—no backend required.
+
+The application is implemented as a Progressive Web App (PWA) using a Service Worker, enabling offline access, faster load times through caching, and installability on supported devices.
+
+<h2 align="center"><a href="https://luminous-profiterole-d4e59b.netlify.app/">Get Started </a></h3>
 
 ---
 
@@ -35,7 +39,7 @@ It helps students manage subjects, schedules, tasks, and track progress using br
 - Shows:
   - Subjects list
   - Today’s schedule
-  - Recent tasks (top 10 pending)
+  - Recent tasks 
 - Scrollable cards for clean UI
 
 ---
@@ -114,6 +118,12 @@ No backend or external APIs are used.
 ---
 
 ## Getting Started
+
+Heres the deployed link - <a href="https://luminous-profiterole-d4e59b.netlify.app/">Student Study Planner </a>
+
+1. Start using it or download it to use offline
+
+OR
 
 1. Clone or download the repository
 2. Open `index.html` in a modern browser
