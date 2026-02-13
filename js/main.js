@@ -24,11 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./serviceWorker.js")
-    .then(reg => console.log("SW registered:", reg.scope))
-    .catch(err => console.error("SW failed:", err));
-}
 
 
 if ("serviceWorker" in navigator) {
